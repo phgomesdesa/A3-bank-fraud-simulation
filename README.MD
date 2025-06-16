@@ -1,5 +1,10 @@
 # bradesco-bank-system
 
+## desenvolvedores
+
+Pedro Henrique de Sá Gomes - RA: 12524232477 
+
+Felipe de Ornelas Chaves - RA: 12525178266
 
 
 

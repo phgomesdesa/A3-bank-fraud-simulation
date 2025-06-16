@@ -21,13 +21,14 @@ public class FraudNotifierService {
 
         String content = String.format("""
                 🚨 Alerta de fraude detectado 🚨
-                
-                Conta de origem: %d
-                Conta de destino: %d
-                Valor: R$ %.2f
-                Motivo: %s
-                Horário: %s
-                """, dto.fromAccountId(), dto.toAccountId(), dto.amount(), dto.reason(), dto.timestamp());
+        
+        ID da transação: %s
+        Conta de origem: %d
+        Conta de destino: %d
+        Valor: R$ %.2f
+        Motivo: %s
+        Horário: %s
+        """, dto.transactionId(), dto.fromAccountId(), dto.toAccountId(), dto.amount(), dto.reason(), dto.timestamp());
 
         emailService.sendFraudAlert(fromAccountUser.getEmail(), "🚨 Fraude detectada!", content);
 
